@@ -13,7 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 " add Nerdtree
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
 Plugin 'Raimondi/delimitMate'
 Plugin 'altercation/vim-colors-solarized'
 " All of your Plugins must be added before the following line
