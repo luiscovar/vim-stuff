@@ -14,6 +14,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'Raimondi/delimitMate'
+Plugin 'altercation/vim-colors-solarized'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -29,7 +31,11 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+syntax enable
+set t_Co=256
+let g:solarized_termcolors=256
 set background=dark
+colorscheme solarized 
 imap jk <ESC>
 
 "Toggle Nerd Tree
@@ -49,5 +55,6 @@ set autoindent          " copy indent from current line when starting a new
 set backspace=indent,eol,start
 "
 set ruler                           " show line and column number
-syntax on   			" syntax highlighting
+set number
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
