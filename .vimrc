@@ -32,7 +32,7 @@ filetype plugin indent on    " required
 
 syntax enable
 set t_Co=256
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized 
 imap jk <ESC>
@@ -56,4 +56,5 @@ set backspace=indent,eol,start
 set ruler                           " show line and column number
 set number
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-
+let delimitMate_expand_cr = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
