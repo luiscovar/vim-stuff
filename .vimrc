@@ -15,6 +15,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Raimondi/delimitMate'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -58,3 +59,4 @@ set number
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let delimitMate_expand_cr = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+set laststatus=2
