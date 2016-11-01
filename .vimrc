@@ -31,13 +31,24 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
 syntax enable
-set t_Co=256
-let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized 
 imap jk <ESC>
+let s:uname = system("echo -n \"$(uname)\"")
+
+"if its a MacOs
+if s:uname == "Darwin"
+    let g:solarized_termtrans=1
+    let g:solarized_termcolors=16
+    set background=dark
+    colorscheme solarized 
+endif
+
+if s:uname == "Linux"
+    let g:solarized_termtrans=1
+    let g:solarized_termcolors=16
+    set background=dark
+    colorscheme solarized 
+endif
 
 "Toggle Nerd Tree
 map <C-e> :NERDTreeToggle<CR> 
@@ -55,8 +66,8 @@ set autoindent          " copy indent from current line when starting a new
 " make backspaces more powerfull
 set backspace=indent,eol,start
 "
-set ruler                           " show line and column number
 set number
+set ruler                           " show line and column number
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let delimitMate_expand_cr = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
