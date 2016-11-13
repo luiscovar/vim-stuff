@@ -33,6 +33,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 syntax enable
 imap jk <ESC>
+"Figure out what system is being used
 let s:uname = system("echo -n \"$(uname)\"")
 
 "if its a MacOs
@@ -43,6 +44,7 @@ if s:uname == "Darwin"
     colorscheme solarized 
 endif
 
+"if its a LinuxOS
 if s:uname == "Linux"
     let g:solarized_termtrans=1
     let g:solarized_termcolors=16
@@ -72,3 +74,5 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let delimitMate_expand_cr = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 set laststatus=2
+"tab to switch windows
+map <tab> <c-w>w 
